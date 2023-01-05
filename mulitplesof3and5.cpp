@@ -2,7 +2,13 @@
 multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of 
 these multiples is 23. Find the sum of all the multiples
 of 3 or 5 below 1000. In general for any two integers a
-and b, find the sum of all multiples of a or b less than n*/
+and b, find the sum of all multiples of a or b less than n
+
+approach would be to add all the terms in the AP x_i=a*i and
+in the AP y_i=b*i less than n and then subtracting all the 
+terms of the AP z_i=lcm(a,b)*i 
+the concept used is the inclusio exclusion principle
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define fast            ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
