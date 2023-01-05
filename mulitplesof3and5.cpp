@@ -8,6 +8,7 @@ using namespace std;
 #define fast            ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 #define int             long long
 #define o(x)            cout<<x<<endl;
+int gcd(int a, int b){if (b == 0)return a;return gcd(b, a % b);} //__gcd 
 int lcm(int a, int b){return (a/gcd(a,b)*b);}
 
 void ans(){
