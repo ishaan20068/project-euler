@@ -1,8 +1,6 @@
 //given a number find its largest prime factor
 #include<bits/stdc++.h>
-#include <chrono>
 using namespace std;
-using namespace std::chrono;
 #define fast            ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 #define int             unsigned long long
 #define o(x)            cout<<x<<endl;
