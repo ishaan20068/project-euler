@@ -12,7 +12,7 @@ int nthprime(int n){
         if(isprime[i]){
             int number=2*i+3;
             primes.push_back(number);
-            for(int j=number*number;j<1000000;j+=2*number){
+            for(int j=number*number;j<=2000001;j+=2*number){
                 isprime[(j-3)/2]=false;
             }
         }
