@@ -7,6 +7,7 @@ using namespace std;
 int lcm(int a, int b){return (a/__gcd(a,b)*b);}
 int power(int a,int b) {if(b==0){return 1;}int res=power(a, b / 2);if (b % 2){return res*res*a;}else{return res*res;}}
 
+// helper function to find the primes up till a number n
 vector<int> seive(int n){
     vector<int>primes;
     vector<bool>isprime(n+1,true);
@@ -27,6 +28,9 @@ vector<int> seive(int n){
     return primes;
 }
 
+// this is the first method that uses the seive of eratosthenes to find the primes up till a numher n 
+// and then calculates the highest power of every prime in the range 1 to n 
+// and multiplies them to get the answer of the smallest number divisible by all numbers from 1 to n
 int div(int n){
     vector<int> seives= seive(n);
     int ans=1;
@@ -36,6 +40,8 @@ int div(int n){
     }
     return ans;
 }
+
+// helper function to find the lcm of a vector of numbers
 int findlcm(vector<int> v){
     int ans=1;
     if(v.size()<1){return 0;}
@@ -57,6 +63,10 @@ int findlcm(vector<int> v){
         return findlcm(v1);
     }
 }
+
+// this is the second method that uses a divide and conquer approach to find the lcm of all numbers from 1 to n
+// it uses the helper function findlcm to find the lcm of a vector of numbers
+// it can be noted that this function is much faster than the first method in expectation
 int div2(int n){
     vector<int> v;
     for(int i=1;i<=n;i++){
